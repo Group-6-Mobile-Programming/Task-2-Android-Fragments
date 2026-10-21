@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_patient_list"
+            android:icon="@drawable/ic_people"
+            android:title="@string/patient_list"
+            android:checked="true"/>
+        <item android:id="@+id/nav_patient_details"
+            android:icon="@drawable/ic_clipboard"
+            android:title="@string/patient_details"/>
+    </group>
+</menu>

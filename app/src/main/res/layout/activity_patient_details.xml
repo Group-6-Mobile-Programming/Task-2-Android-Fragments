@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/uhc_background"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/uhc_green"
+        app:navigationContentDescription="@string/navigate_back"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/patient_details"
+        app:titleTextColor="@color/uhc_surface"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/uhc_surface"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvDetailName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/uhc_text_primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    tools:text="Nakato Grace"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal">
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sex"/>
+                        <TextView android:id="@+id/tvSex" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="Female"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                        <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/age"/>
+                        <TextView android:id="@+id/tvAge" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="34 years"/>
+                    </LinearLayout>
+
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.2" android:orientation="vertical">
+                        <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/patient_id"/>
+                        <TextView android:id="@+id/tvPatientId" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="UHC-00214"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/uhc_divider"/>
+
+            <TextView
+                style="@style/UHC.Text.Section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/medical_history"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="16dp"
+                tools:listitem="@layout/item_history_card"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/uhc_green"
+        app:title="@string/app_title_wide"
+        app:titleTextColor="@color/uhc_surface"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPatients"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.31"
+            android:background="@color/uhc_surface"
+            tools:listitem="@layout/item_patient"/>
+
+        <View android:layout_width="1dp" android:layout_height="match_parent" android:background="@color/uhc_divider"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.69"
+            android:background="@color/uhc_background">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/uhc_surface"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/uhc_card_stroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView android:id="@+id/tvDetailName"
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:textColor="@color/uhc_text_primary" android:textSize="28sp"
+                            android:textStyle="bold" tools:text="Nakato Grace"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp" android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sex"/>
+                                <TextView android:id="@+id/tvSex" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="Female"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                                <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/age"/>
+                                <TextView android:id="@+id/tvAge" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="34 years"/>
+                            </LinearLayout>
+                            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:orientation="vertical">
+                                <TextView style="@style/UHC.Text.Label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/patient_id"/>
+                                <TextView android:id="@+id/tvPatientId" style="@style/UHC.Text.Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="16sp" tools:text="UHC-00214"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <TextView
+                    style="@style/UHC.Text.Section"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp" android:layout_marginBottom="12dp"
+                    android:text="@string/medical_history"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/uhc_surface"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/uhc_card_stroke"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:background="@color/uhc_green_tint"
+                            android:orientation="horizontal"
+                            android:paddingStart="16dp" android:paddingTop="12dp"
+                            android:paddingEnd="16dp" android:paddingBottom="12dp">
+                            <TextView style="@style/UHC.Text.Label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.1" android:text="@string/date" android:textColor="@color/uhc_green" android:textStyle="bold"/>
+                            <TextView style="@style/UHC.Text.Label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.5" android:text="@string/diagnosis" android:textColor="@color/uhc_green" android:textStyle="bold"/>
+                            <TextView style="@style/UHC.Text.Label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1.8" android:text="@string/treatment" android:textColor="@color/uhc_green" android:textStyle="bold"/>
+                            <TextView style="@style/UHC.Text.Label" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="@string/notes" android:textColor="@color/uhc_green" android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false"
+                            tools:listitem="@layout/item_history_row"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Uganda Health Connect</string>
+    <string name="app_short_name">UHC</string>
+    <string name="app_title_wide">UHC · Uganda Health Connect</string>
+    <string name="patient_list">Patient list</string>
+    <string name="patient_details">Patient details</string>
+    <string name="sex">Sex</string>
+    <string name="age">Age</string>
+    <string name="patient_id">Patient ID</string>
+    <string name="medical_history">Medical history</string>
+    <string name="treatment">Treatment</string>
+    <string name="notes">Notes</string>
+    <string name="date">Date</string>
+    <string name="diagnosis">Diagnosis</string>
+    <string name="open_drawer">Open navigation drawer</string>
+    <string name="navigate_back">Back</string>
+</resources>

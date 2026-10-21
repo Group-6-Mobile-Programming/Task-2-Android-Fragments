@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/uhc_surface"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:strokeColor="@color/uhc_card_stroke"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView android:id="@+id/tvVisitDate" style="@style/UHC.Text.Secondary"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            tools:text="12 Oct 2026"/>
+
+        <TextView android:id="@+id/tvDiagnosis" style="@style/UHC.Text.Name"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            tools:text="Hypertension review"/>
+
+        <TextView style="@style/UHC.Text.Label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/treatment"/>
+        <TextView android:id="@+id/tvTreatment" style="@style/UHC.Text.Body"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:text="Amlodipine 5 mg once daily, continued."/>
+
+        <TextView style="@style/UHC.Text.Label"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="@string/notes"/>
+        <TextView android:id="@+id/tvNotes" style="@style/UHC.Text.Body"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            tools:text="Blood pressure controlled. Return for review in 4 weeks."/>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

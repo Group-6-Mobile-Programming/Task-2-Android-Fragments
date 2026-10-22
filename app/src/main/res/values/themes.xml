@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.UHC" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/uhc_green</item>
+        <item name="colorOnPrimary">@color/uhc_surface</item>
+        <item name="colorSurface">@color/uhc_surface</item>
+        <item name="android:statusBarColor">@color/uhc_green_dark</item>
+        <item name="android:windowBackground">@color/uhc_surface</item>
+    </style>
+    <style name="UHC.Text.Name" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/uhc_text_primary</item>
+    </style>
+    <style name="UHC.Text.Secondary" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/uhc_text_secondary</item>
+    </style>
+    <style name="UHC.Text.Label" parent="">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/uhc_text_secondary</item>
+    </style>
+    <style name="UHC.Text.Body" parent="">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/uhc_text_primary</item>
+    </style>
+    <style name="UHC.Text.Section" parent="">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/uhc_text_primary</item>
+    </style>
+</resources>

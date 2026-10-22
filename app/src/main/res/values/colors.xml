@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uhc_green">#0B5F4B</color>
+    <color name="uhc_green_dark">#084A3B</color>
+    <color name="uhc_green_tint">#E1F0EC</color>
+    <color name="uhc_text_primary">#121E1A</color>
+    <color name="uhc_text_secondary">#55625E</color>
+    <color name="uhc_divider">#DCDFDD</color>
+    <color name="uhc_background">#F3F5F3</color>
+    <color name="uhc_surface">#FFFFFF</color>
+    <color name="uhc_card_stroke">#E0E4E2</color>
+</resources>

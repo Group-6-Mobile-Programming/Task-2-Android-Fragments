@@ -29,12 +29,10 @@ android {
     }
 }
 
-task checkstyle(type: Checkstyle) {
+// Proper configuration for Checkstyle task mapping to Java source sets
+checkstyle {
+    toolVersion '10.12.5'
     configFile file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
-    source 'src/main/java'
-    include '**/*.java'
-    exclude '**/gen/**'
-    classpath = files()
 }
 
 dependencies {

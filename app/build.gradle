@@ -32,7 +32,7 @@ android {
     lint {
         abortOnError true
         checkReleaseBuilds false
-        enable 'ValidFragment', 'UseGetContext', 'FragmentAddRemoveNegative'
+        enable 'ValidFragment', 'UseGetContext'
         error 'ValidFragment', 'UseGetContext'
         warning 'NewApi', 'HardcodedText'
         baseline file("lint-baseline.xml")

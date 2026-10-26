@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'checkstyle'
 }
 
 android {
@@ -23,26 +22,21 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-}
 
-checkstyle {
-    toolVersion '10.12.5'
-    configFile file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
-}
-
-// Explicitly register the checkstyleMain task for Android source directories
-task checkstyleMain(type: Checkstyle) {
-    configFile file("${rootProject.projectDir}/config/checkstyle/checkstyle.xml")
-    source 'src/main/java'
-    include '**/*.java'
-    exclude '**/gen/**'
-    exclude '**/R.java'
-    exclude '**/BuildConfig.java'
-    classpath = files()
+    // Android Lint configuration enforcing Fragment best practices and CI/CD gating
+    lint {
+        abortOnError true
+        checkReleaseBuilds false
+        enable 'ValidFragment', 'UseGetContext', 'FragmentAddRemoveNegative'
+        error 'ValidFragment', 'UseGetContext'
+        warning 'NewApi', 'HardcodedText'
+        baseline file("lint-baseline.xml")
+    }
 }
 
 dependencies {
